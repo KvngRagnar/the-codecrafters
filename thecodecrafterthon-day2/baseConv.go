@@ -7,6 +7,9 @@ import (
 
 func ConvToDec(num string, base int) (int64, error) {
 	decimal, err := strconv.ParseInt(num, 10, 64)
+	if err != nil {
+		fmt.Println("Value is not a decimal number, kindly input a decimal number")
+	}
 	return decimal, err
 }
 
