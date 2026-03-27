@@ -16,22 +16,23 @@ func mul(a, b int) int {
 	return a * b
 }
 
-func div(a, b int) int{
-	return a / b
+func div(a, b int) (int, string) {
+	if b == 0 {
+		return 0, "denominator cannot be 0"
+	}
+	return a / b, " "
 }
 
 func main() {
 	for {
-	var a , b int
-	fmt.Println("input first integer")
-	fmt.Scanln(&a)
+		var a, b int
+		fmt.Println("input first integer")
+		fmt.Scanln(&a)
 
+		fmt.Println("input second integer")
+		fmt.Scanln(&b)
 
-	fmt.Println("input second integer")
-	fmt.Scanln(&b)
-
-
-	var operation string
+		var operation string
 
 		fmt.Println("operation = add, sub, mul, div, quit, help, cap")
 		fmt.Scanln(&operation)
@@ -44,7 +45,7 @@ func main() {
 		case "sub":
 			fmt.Println(sub(a, b))
 			continue
-		
+
 		case "mul":
 			fmt.Println(mul(a, b))
 			continue
@@ -66,7 +67,7 @@ func main() {
 		default:
 			fmt.Println("Invalid expression")
 		}
-		
+
 	}
-	
+
 }
