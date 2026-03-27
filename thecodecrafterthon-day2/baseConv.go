@@ -29,14 +29,18 @@ func ConvToBin(num string) (int64, error) {
 	return bin, err
 }
 
+func colour(text, color string) string {
+	return color + text + "\033[0m"
+}
+
 func main() {
 	for {
 		var num string
-		fmt.Println("Input string to convet")
+		fmt.Println(colour("Input string to convet", "\033[34m"))
 		fmt.Scanln(&num)
 
 		var operation string
-		fmt.Println("choose operation (bin, dec, hex)")
+		fmt.Println(colour("choose operation (bin, dec, hex, quit)", "\033[36m"))
 		fmt.Scanln(&operation)
 
 		switch operation {
@@ -54,6 +58,7 @@ func main() {
 
 		case "quit":
 			fmt.Println("Leaving so soon?, hope to see you soon")
+			return
 
 		default:
 			fmt.Println("Not a valid conversion, try again")
