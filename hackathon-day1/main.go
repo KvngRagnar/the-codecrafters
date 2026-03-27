@@ -4,19 +4,19 @@ import (
 	"fmt"
 )
 
-func add(a, b int) int {
+func add(a, b float64) float64 {
 	return a + b
 }
 
-func sub(a, b int) int {
+func sub(a, b float64) float64 {
 	return a - b
 }
 
-func mul(a, b int) int {
+func mul(a, b float64) float64 {
 	return a * b
 }
 
-func div(a, b int) (int, string) {
+func div(a, b float64) (float64, string) {
 	if b == 0 {
 		return 0, "denominator cannot be 0"
 	}
@@ -24,16 +24,16 @@ func div(a, b int) (int, string) {
 }
 
 func colour(text, color string) string {
-	return color + text + "\033[33m"
+	return color + text + "\033[0m"
 }
 
 func main() {
 	for {
-		var a, b int
-		fmt.Println(colour("input first integer", "\033[33m"))
+		var a, b float64
+		fmt.Println(colour("input first integer", "\033[34m"))
 		fmt.Scanln(&a)
 
-		fmt.Println("input second integer", "\033[33m")
+		fmt.Println(colour("input second integer", "\033[33m"))
 		fmt.Scanln(&b)
 
 		var operation string
