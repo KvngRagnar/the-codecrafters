@@ -79,7 +79,7 @@ CODECRAFTERS — HACKATHON CHALLENGE
   → How do you validate before you calculate?
   → What does a helpful error message look like?
   → How do you structure your operations so the
-    code doesn't become one giant if-else chain?
+    code does not become one giant if-else chain?
 
   
 PHASE 1 IS DONE WHEN:
