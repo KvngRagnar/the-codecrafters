@@ -6,7 +6,7 @@ import (
 )
 
 func ConvToDec(num string, base int) (int64, error) {
-	decimal, err := strconv.ParseInt(num, base, 64)
+	decimal, err := strconv.ParseInt(num, 10, 64)
 	return decimal, err
 }
 
@@ -32,7 +32,15 @@ func main() {
 
 		switch operation {
 		case "bin":
+			fmt.Println(ConvToBin(num))
+			continue
+
+		case "dec":
 			fmt.Println(ConvToDec(num, 64))
+			continue
+
+		case "hex":
+			fmt.Println(ConvToHex(num))
 			continue
 		}
 	}
