@@ -34,7 +34,7 @@ func main() {
 
 		var operation string
 
-		fmt.Println("operation = add, sub, mul, div, quit, help, cap")
+		fmt.Println("choose an operation (add, sub, mul, div, quit, help)")
 		fmt.Scanln(&operation)
 
 		switch operation {
@@ -55,17 +55,14 @@ func main() {
 			continue
 
 		case "quit":
-			fmt.Println("Thank you for testing my code")
+			fmt.Println("Thank you for testing my code, abientot!!")
 			return
 
 		case "help":
 			fmt.Println("supported commands = add, sub, mul, div, quit, help")
 
-		case "cap":
-			fmt.Println("not a valid expression, type help for valid expressions")
-
 		default:
-			fmt.Println("Invalid expression")
+			fmt.Println("Invalid expression, type help for valid expressions")
 		}
 
 	}
