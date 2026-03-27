@@ -23,13 +23,17 @@ func div(a, b int) (int, string) {
 	return a / b, " "
 }
 
+func colour(text, color string) string {
+	return color + text + "\033[33m"
+}
+
 func main() {
 	for {
 		var a, b int
-		fmt.Println("input first integer")
+		fmt.Println(colour("input first integer", "\033[33m"))
 		fmt.Scanln(&a)
 
-		fmt.Println("input second integer")
+		fmt.Println("input second integer", "\033[33m")
 		fmt.Scanln(&b)
 
 		var operation string
@@ -62,7 +66,7 @@ func main() {
 			fmt.Println("supported commands = add, sub, mul, div, quit, help")
 
 		default:
-			fmt.Println("Invalid expression, type help for valid expressions")
+			fmt.Println("Invalid expression, type help for valid expressions", "\033[31m")
 		}
 
 	}
