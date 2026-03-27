@@ -15,11 +15,17 @@ func ConvToDec(num string, base int) (int64, error) {
 
 func ConvToHex(num string) (int64, error) {
 	hex, err := strconv.ParseInt(num, 16, 64)
+	if err != nil {
+		fmt.Println("Value is not a hexadecimal number, kindly input a decimal number")
+	}
 	return hex, err
 }
 
 func ConvToBin(num string) (int64, error) {
 	bin, err := strconv.ParseInt(num, 2, 64)
+	if err != nil {
+		fmt.Println("Value is not a binary number, kindly input a decimal number")
+	}
 	return bin, err
 }
 
