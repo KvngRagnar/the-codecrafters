@@ -51,6 +51,13 @@ func main() {
 		case "hex":
 			fmt.Println(ConvToHex(num))
 			continue
+
+		case "quit":
+			fmt.Println("Leaving so soon?, hope to see you soon")
+
+		default:
+			fmt.Println("Not a valid conversion, try again")
+			fmt.Println("valid conversions are: bin, dec and hex")
 		}
 	}
 }
