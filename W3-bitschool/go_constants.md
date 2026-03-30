@@ -21,3 +21,10 @@
     There are two types of constants:
 ** Typed constant
 ** Untyped Constant
+
+    The only difference is that typed constants are declared without a data type meanwhile, untyped ones are declared without a data type and are inferred by the compiler from the value.
+
+    Multiple constants can be declared by grouping them in a block for readability just as when making multiple imports.
+    
+     
+    NOTE: When constants are declared, it is impossible to change their values after declaration.
