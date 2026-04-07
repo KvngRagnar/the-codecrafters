@@ -27,3 +27,16 @@
     The returned value from a function can be stored in a variable for later use. Additionally, Go functions can return multiple values at once, which can be assigned to multiple variables when the function is called.
 
     If some returned values are not needed, they can be ignored using an underscore (_). Overall, return values make functions more powerful by allowing them to produce and share results.
+
+## RECURSION FUNCTION
+
+    Recursion in Go is a technique where a function calls itself to solve a problem. A recursive function must have a stopping condition to prevent it from running indefinitely.
+
+    In recursion, the function repeatedly calls itself with updated values until the stop condition is met. For example, a function can increment a value until it reaches a limit, or decrement a value until it reaches zero.
+
+    Recursion is useful for solving problems that involve repeated steps, such as counting or calculating factorials. However, developers must be careful to avoid infinite loops or excessive memory usage.
+
+    Overall, when used correctly, recursion is an efficient and elegant way to handle repetitive tasks in programming.
+
+
+    
